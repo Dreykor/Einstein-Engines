@@ -1,7 +1,6 @@
 ﻿using Content.Server.NPC.Components;
 using Content.Shared.Dataset;
 using Content.Shared.Random;
-using Content.Server.StationEvents.Events;
 using Content.Shared.Roles;
 using Robust.Shared.Audio;
 using Robust.Shared.Prototypes;
@@ -9,7 +8,7 @@ using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
 
 namespace Content.Server.GameTicking.Rules.Components;
 
-[RegisterComponent, Access(typeof(TraitorRuleSystem), typeof(PirateRadioSpawnRule))]
+[RegisterComponent, Access(typeof(TraitorRuleSystem))]
 public sealed partial class TraitorRuleComponent : Component
 {
     public readonly List<EntityUid> TraitorMinds = new();
