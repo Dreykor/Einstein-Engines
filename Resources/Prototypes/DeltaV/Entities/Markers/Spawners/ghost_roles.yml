@@ -22,10 +22,8 @@
 
 - type: entity
   noSpawn: false
+  parent: BaseAntagSpawner
   id: SpawnPointGhostSyndicateListener
-  name: ghost role spawn point
-  suffix: syndicate listener
-  parent: MarkerBase
   components:
   - type: GhostRole
     name: ghost-role-information-loneop-name
@@ -37,38 +35,30 @@
     #- !type:DepartmentTimeRequirement # DeltaV - Security dept time requirement (NOT SURE WHAT TO MAKE THESE)
     #  department: Security
     #  time: 36000 # DeltaV - 10 hours
-  - type: GhostRoleMobSpawner
-    prototype: MobHumanSyndicateListener
-  - type: Sprite
-    sprite: Markers/jobs.rsi #Not sure what needs to be changed here <-- and below
-    layers:
-      - state: green
-      - sprite: Structures/Wallmounts/signs.rsi
-        state: radiation
 
 - type: entity # Part of PirateRadioSpawn
   noSpawn: true
   id: SpawnPointGhostSyndicateListener
   name: ghost role spawn point
   suffix: syndicate listener
-  parent: MarkerBase
+  parent: BaseAntagSpawner
   components:
   - type: GhostRole
     name: ghost-role-information-listeningop-name
     description: ghost-role-information-listeningop-description
     rules: ghost-role-information-listeningop-rules
-    requirements: # Worth considering these numbers for the goal of making sure someone willing to MRP takes this.
-    - !type:OverallPlaytimeRequirement
-      time: 259200 # 72 hours
-    - !type:DepartmentTimeRequirement
-      department: Security
-      time: 40000 # 11.1 hours
-    - !type:DepartmentTimeRequirement
-      department: Civilian
-      time: 40000 # 11.1 hours
-    - !type:DepartmentTimeRequirement
-      department: Command
-      time: 40000 # 11.1 hours
+    #requirements: # Worth considering these numbers for the goal of making sure someone willing to MRP takes this.
+    #- !type:OverallPlaytimeRequirement
+    #  time: 259200 # 72 hours
+    #- !type:DepartmentTimeRequirement
+    #  department: Security
+    #  time: 40000 # 11.1 hours
+    #- !type:DepartmentTimeRequirement
+    #  department: Civilian
+    #  time: 40000 # 11.1 hours
+    #- !type:DepartmentTimeRequirement
+    #  department: Command
+    #  time: 40000 # 11.1 hours
   - type: GhostRoleMobSpawner
     prototype: MobHumanSyndicateListener
   - type: Sprite
